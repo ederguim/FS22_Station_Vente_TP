@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+<translationContributors>Nonnus</translationContributors>
+<texts>
+
+
+		<text name="fillType_sand"			text="Sand"			 />
+		<text name="fillType_rocks"			text="Rocks"			 />
+		<text name="fillType_gravel"		text="Gravel"			 />
+		<text name="fillType_dirt"			text="Dirt"				 />
+		<text name="fillType_limestone"		text="Limeston"			 />
+		<text name="fillType_cement"		text="Cement"			 />
+		<text name="fillType_coal"			text="Coal"			 />
+		<text name="fillType_tailings"		text="Tailings"		 />
+		<text name="fillType_toutvenant"     text="Bed Road"		 />
+		<text name="fillType_tar"			text="TAR"			 />
+		<text name="fillType_asphalt"		text="Asfhalt"			 />
+		<text name="fillType_concrete"		text="Concrete"			 />
+		<text name="fillType_gold"			text="Gold"				 />
+		<text name="fillType_riversand"		text="River sand"		 />
+		<text name="fillType_rubber"			text="Rubber"			 />
+		<text name="fillType_riversandp"		text="Clean River sand"	 />
+		<text name="fillType_stonepowder"	text="Stone Powder"		 />
+		<text name="fillType_gardenstones"	text="Garden Stone"	 />
+		<text name="fillType_tires"			text="Tires"			 />
+		<text name="fillType_iron"			text="Iron"			 />
+		<text name="fillType_steel"			text="Steel"				 />
+		<text name="fillType_lithium"		text="Lithium"			 />
+		<text name="fillType_lithiumore"	text="LtihiumOre"	 />
+		<text name="fillType_clay"			text="Clay"			 />
+		<text name="fillType_bricks"		    text="Bricks"	     />
+		<text name="fillType_crudeoil"		text="CrudeOil"			 />
+		<text name="fillType_marble"		    text="Marble"			 />
+		<text name="fillType_marblepallets"	text="MarblePallets"/>
+		<text name="fillType_propane"			text="Propane"			 />
+		<text name="fillType_coalpowder"		    text="Coal powder"	     />
+		<text name="fillType_crushedcoal"		text="Crushed Coal"			 />	
+		<text name="fillType_ironore"			text="IronOre"			 />
+		<text name="fillType_glass"			text="Glass"			 />
+		<text name="fillType_rubble"			text="Rubble"			 />
+		<text name="fillType_crushedstone"			text="Crushed Stone"/>
+		<text name="fillType_stonechips"			text="Stone Chips"			 />
+        <text name="sellingStationContainers" text="Container Warehouse"			 />
+</texts>
+<elements><e k="action_buyOBJECT" v="Buy %s" tag="format"/>
+<e k="deadwoodMission_action" v="Cut down %d marked trees" tag="format"/>
+<e k="deadwoodMission_completed" v="Deadwood contract at farmland %d finished" tag="format"/>
+<e k="deadwoodMission_completionNotification" v="Deadwood contract at farmland %d is %d%% completed" tag="format"/>
+<e k="deadwoodMission_description" v="In this area there is a problem with deadwood. Help the owner and cut down all dead trees. Each tree is already marked! You can sell them afterwards."/>
+<e k="deadwoodMission_oneRemainingTree" v="1 tree remaining"/>
+<e k="deadwoodMission_remainingTrees" v="%d trees remaining" tag="format"/>
+<e k="deadwoodMission_tally_wronglyCut" v="Wrong trees felled"/>
+<e k="deadwoodMission_title" v="Deadwood"/>
+<e k="destructibleRockMission_action" v="Remove %d marked rocks with a hydraulic breaker" tag="format"/>
+<e k="destructibleRockMission_completed" v="Rock removal contract at farmland %d finished" tag="format"/>
+<e k="destructibleRockMission_completionNotification" v="Rock removal contract at farmland %d is %d%% completed" tag="format"/>
+<e k="destructibleRockMission_description" v="The owner wants you to destroy specific rocks inside the area."/>
+<e k="destructibleRockMission_oneRemainingRock" v="1 rock remaining"/>
+<e k="destructibleRockMission_remainingRocks" v="%d rocks remaining" tag="format"/>
+<e k="destructibleRockMission_tally_wronglyRemoved" v="Wrong rocks removed"/>
+<e k="destructibleRockMission_title" v="Rock removal"/>
+<e k="helpLine_NewMissions" v="New Missions"/>
+<e k="helpLine_TransportMissionsdesc" v="A second new mission type is the transport mission. You are hired to transport felled trees to the southern sawmill. The pickup points can be anywhere on the map. Be careful not to deliver them to the wrong destination as you are responsible for any damages."/>
+<e k="helpLine_deadwoodMissionsdesc" v="There is a new mission type, the deadwood mission. The owner of forest will hire you to cut down dead trees on their land. Once the mission is accepted, an area where you can find the dead trees will be marked on the map. Furthermore the specific trees are marked with an &lt;!&gt; so that you know which are the correct ones. Be careful not to cut down any unmarked trees, otherwise
+you will be penalized. Once you cut down a mission tree you can sell it to earn some additional money. Make sure to sell all trees before collecting your mission reward, as the forest owner will take care of this otherwise."/>
+<e k="helpLine_destructibleRocksMissionsdesc" v="Finally there are rock removal missions where it is your task to destroy marked rocks in a specified area. For this you require a hydraulic breaker attachment for a skid steer loader. Watch out to only destroy the marked boulders, as you will receive a penalty otherwise."/>
+<e k="helpLine_hydraulicHammer" v="Hydraulic Breaker"/>
+<e k="helpLine_hydraulicHammerdesc" v="Hammer time! All over the area, mighty boulders dot the forest. Use the hydraulic breaker to crush the rocks located on your farmland into pebbles. These can be collected and sold at the debris crusher."/>
+<e k="helpLine_markingspray" v="Markingspray"/>
+<e k="helpLine_markingspraydesc" v="Paint the forest! When deciding on which trees to fell and which to preserve, you have a handy tool now. You can mark trees with different colored markingspray. There is also an option for different icons to spray on trees to make sure the correct tree is being cut down."/>
+</elements>
+
+
+</l10n>

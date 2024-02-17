@@ -1,0 +1,566 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<map xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../shared/xml/schema/fillTypes.xsd">
+<!-- This file is used as main configuration file for fillTypes                                                                    -->
+<!-- Lua code dynamically generates 3 array (diffuse,normal,specular) files from textures listed here                              -->
+
+<!-- tipAnywhere + groundHeightShader.xml                                                                                          -->
+<!-- materials constructed dynamically                                                                                             -->
+
+<!-- fillVolume + fillPlaneShader.xml                                                                                              -->
+<!-- fillVolume loads 1 material from $data/fillPlanes/fillPlane_materialHolder.i3d and then set array index based on fillTypeId   -->
+
+<!-- ShaderPlaneEffect + grainUnloadingShader.xml + unloadMesh in vehicle i3d file                                                 -->
+<!-- loads material from $data/effects/unload/unloadMeshes_materialHolder.i3d and then set array index based on fillTypeId         -->
+
+<!-- ShaderPlaneEffect + grainUnloadingSmokeShader.xml + unloadMeshSmoke in vehicle i3d file                                       -->
+<!-- loads material from $data/effects/unload/unloadMeshes_materialHolder.i3d and then set array index based on fillTypeId         -->
+
+<!-- ShaderPlaneEffect + grainUnloadingShader.xml (pipeEffect variation) + pipeEffectMesh in vehicle i3d file                      -->
+<!-- loads material from $data/effects/unload/unloadMeshes_materialHolder.i3d and then set array index based on fillTypeId         -->
+
+<!-- ParticleEffect + psColorShader.xml (fillTypeArray) + emitShape in vehicle i3d file                                            -->
+<!-- loaded one generic unload particle system from $data/effects/unload/unloadParticles.i3d                                       -->
+<!-- loaded one material from $data/effects/unload/unloadParticles_materialHolder.i3d and then set array index based on fillTypeId -->
+<!-- last mipmap (usually its 1 single color) from fillTypeId used as smoke color                                                  -->
+<!-- custom color can be set by fruitSmokeColor                                                                                    -->
+
+<!-- ShaderPlaneEffect + grainUnloadingBeltShader.xml + beltEffectMesh in vehicle i3d file                                         -->
+<!-- loads material from $data/effects/belt/beltMeshes_materialHolder.i3d and then set array index based on fillTypeId             -->
+
+<!-- ShaderPlaneEffect + levelerShader.xml + levelerEffectMesh in vehicle i3d file                                                 -->
+<!-- loads material from $data/effects/leveler/levelerMeshes_materialHolder.i3d and then set array index based on fillTypeId       -->
+
+    <fillTypes>
+	<!--stone with weight change-->
+	 <fillType name="STONE" title="$l10n_fillType_stone" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="0.05" />
+            <image      hud     ="$dataS/menu/hud/fillTypes/hud_fill_stone.png" />
+            <textures   diffuse ="$data/fillPlanes/stone_diffuse.png"
+                        normal  ="$data/fillPlanes/stone_normal.png"
+                        specular="$data/fillPlanes/stone_specular.png"
+                        distance="$data/fillPlanes/distance/stoneDistance_diffuse.png" />
+        </fillType>
+		 <fillType name="ASPHALT" title="$l10n_fillType_asphalt" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="1.05" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_asphalt.png" />
+            <textures   diffuse ="fillPlanesTP/fruit_tp_ground_texture/asphalt_diffuse.dds"
+                        normal  ="fillPlanesTP/fruit_tp_ground_texture/asphalt_normal.dds"
+                        specular="$data/fillPlanes/stone_specular.png"
+                        distance="fillPlanesTP/fruit_tp_ground_texture/asphaltDistance_diffuse.dds" />
+        </fillType>
+		<fillType name="COAL" title="$l10n_fillType_coal" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="0.85" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_coal.png" />
+            <textures   diffuse ="fillPlanesTP/fruit_tp_ground_texture/coal_diffuse.dds"
+                        normal  ="fillPlanesTP/fruit_tp_ground_texture/asphalt_normal.dds"
+                        specular="$data/fillPlanes/stone_specular.png"
+                        distance="fillPlanesTP/fruit_tp_ground_texture/asphaltDistance_diffuse.dds" />
+        </fillType>
+		<fillType name="TAILINGS" title="$l10n_fillType_tailings" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="0.15" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_ballast.png" />
+            <textures   diffuse ="fillPlanesTP/fruit_tp_ground_texture/ballast_diffuse.dds"
+                        normal  ="fillPlanesTP/fruit_tp_ground_texture/ballast_normal.dds"
+                        specular="$data/fillPlanes/stone_specular.png"
+                        distance="fillPlanesTP/fruit_tp_ground_texture/ballastDistance_diffuse.dds" />
+        </fillType>
+		<fillType name="CONCRETE" title="$l10n_fillType_concrete" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="2.05" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_concrete.png" />
+            <textures   diffuse ="fillPlanesTP/fruit_tp_ground_texture/concrete_diffuse.dds"
+                        normal  ="fillPlanesTP/fruit_tp_ground_texture/concrete_normal.dds"
+                        specular="$data/fillPlanes/stone_specular.png"
+                        distance="fillPlanesTP/fruit_tp_ground_texture/concreteDistance_diffuse.dds" />
+        </fillType>
+		<fillType name="LIMESTONE" title="$l10n_fillType_limestone" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="0.25" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_cracked.png" />
+            <textures   diffuse ="fillPlanesTP/fruit_tp_ground_texture/cracked_diffuse.dds"
+                        normal  ="fillPlanesTP/fruit_tp_ground_texture/cracked_normal.dds"
+                        specular="$data/fillPlanes/stone_specular.png"
+                        distance="fillPlanesTP/fruit_tp_ground_texture/crackedDistance_diffuse.dds" />
+        </fillType>	
+		<fillType name="DIRT" title="$l10n_fillType_dirt" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="0.15" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_dirt.png" />
+            <textures   diffuse ="fillPlanesTP/fruit_tp_ground_texture/dirt_diffuse.dds"
+                        normal  ="fillPlanesTP/fruit_tp_ground_texture/dirt_normal.dds"
+                        specular="$data/fillPlanes/stone_specular.png"
+                        distance="fillPlanesTP/fruit_tp_ground_texture/dirtDistance_diffuse.dds" />
+        </fillType>	
+		<fillType name="GRAVEL" title="$l10n_fillType_gravel" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="0.45" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_gravel.png" />
+            <textures   diffuse ="fillPlanesTP/fruit_tp_ground_texture/gravel_diffuse.dds"
+                        normal  ="fillPlanesTP/fruit_tp_ground_texture/gravel_normal.dds"
+                        specular="$data/fillPlanes/stone_specular.png"
+                        distance="fillPlanesTP/fruit_tp_ground_texture/gravelDistance_diffuse.dds" />
+        </fillType>	
+		<fillType name="SAND" title="$l10n_fillType_sand" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="0.35" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_sand.png" />
+            <textures   diffuse ="fillPlanesTP/fruit_tp_ground_texture/sand_diffuse.dds"
+                        normal  ="fillPlanesTP/fruit_tp_ground_texture/sand_normal.dds"
+                        specular="$data/fillPlanes/stone_specular.png"
+                        distance="fillPlanesTP/fruit_tp_ground_texture/sandDistance_diffuse.dds" />
+        </fillType>		
+		<fillType name="IRON" title="$l10n_fillType_iron" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="1.05" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_iron.png" />
+            <textures   diffuse ="fillPlanesTP/fruit_tp_ground_texture/iron_diffuse.dds"
+                        normal  ="fillPlanesTP/fruit_tp_ground_texture/iron_normal.dds"
+                        specular="$data/fillPlanes/stone_specular.png"
+                        distance="fillPlanesTP/fruit_tp_ground_texture/ironDistance_diffuse.dds" />
+        </fillType>		
+		<fillType name="TOUTVENANT" title="$l10n_fillType_toutvenant" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="0.85" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_toutvenant.png" />
+            <textures   diffuse ="fillPlanesTP/fruit_tp_ground_texture/toutvenant_diffuse.dds"
+                        normal  ="fillPlanesTP/fruit_tp_ground_texture/toutvenant_normal.dds"
+                        specular="$data/fillPlanes/stone_specular.png"
+                        distance="fillPlanesTP/fruit_tp_ground_texture/toutvenantDistance_diffuse.dds" />
+        </fillType>		
+        <fillType name="CEMENT" title="$l10n_fillType_cement" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="0.75" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_cement.png" />
+            <textures   diffuse ="fillPlanesTP/fruit_tp_ground_texture/cement_diffuse.dds"
+                        normal  ="fillPlanesTP/fruit_tp_ground_texture/cement_normal.dds"
+                        specular="$data/fillPlanes/stone_specular.png"
+                        distance="fillPlanesTP/fruit_tp_ground_texture/cementDistance_diffuse.dds" />
+        </fillType>	
+        <fillType name="RIVERSAND" title="$l10n_fillType_riversand" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="0.25" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_riversand.png" />
+            <textures   diffuse ="fillPlanesTP/fruit_tp_ground_texture/riversand_diffuse.dds"
+                        normal  ="fillPlanesTP/fruit_tp_ground_texture/riversand_normal.dds"
+                        specular="$data/fillPlanes/stone_specular.png"
+                        distance="fillPlanesTP/fruit_tp_ground_texture/riversandDistance_diffuse.dds" />
+        </fillType>		
+        <fillType name="RIVERSANDP" title="$l10n_fillType_riversandp" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="0.65" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_riversandp.png" />
+            <textures   diffuse ="fillPlanesTP/fruit_tp_ground_texture/riversandp_diffuse.dds"
+                        normal  ="fillPlanesTP/fruit_tp_ground_texture/riversandp_normal.dds"
+                        specular="$data/fillPlanes/stone_specular.png"
+                        distance="fillPlanesTP/fruit_tp_ground_texture/riversandpDistance_diffuse.dds" />
+        </fillType>	
+        <fillType name="RUBBER" title="$l10n_fillType_rubber" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="0.65" >
+			 <factors>
+                    <factor period="1"  value="1.08" />
+                    <factor period="2"  value="1.07" />
+                    <factor period="3"  value="1.05" />
+                    <factor period="4"  value="0.97" />
+                    <factor period="5"  value="0.94" />
+                    <factor period="6"  value="0.99" />
+                    <factor period="7"  value="1.10" />
+                    <factor period="8"  value="1.11" />
+                    <factor period="9"  value="1.06" />
+                    <factor period="10" value="0.95" />
+                    <factor period="11" value="0.91" />
+                    <factor period="12" value="0.99" />
+                </factors>
+            </economy>
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_rubber.png" />
+			<textures   diffuse ="fillPlanesTP/fruit_tp_ground_texture/rubber_diffuse.dds"
+                        normal  ="fillPlanesTP/fruit_tp_ground_texture/rubber_normal.dds"
+                        specular="$data/fillPlanes/stone_specular.png"
+                        distance="fillPlanesTP/fruit_tp_ground_texture/rubberDistance_diffuse.dds" />
+          <pallet     filename="maps/placeables/tiresprocessor22/rubber/rubberpallet.xml" />
+        </fillType>		
+        <fillType name="TIRES" title="$l10n_fillType_tires" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="0.05" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_tires.png" />
+            <textures   diffuse ="fillPlanesTP/fruit_tp_ground_texture/tires_diffuse.dds"
+                        normal  ="fillPlanesTP/fruit_tp_ground_texture/tires_normal.dds"
+                        specular="$data/fillPlanes/stone_specular.png"
+                        distance="fillPlanesTP/fruit_tp_ground_texture/tiresDistance_diffuse.dds" />
+        </fillType>		
+        <fillType name="TAR" title="$l10n_fillType_tar" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.7" maxPhysicalSurfaceAngle="0" />
+            <economy pricePerLiter="0.95" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_tar.png" />
+            </fillType>	
+        <fillType name="STONEPOWDER" title="$l10n_fillType_stonepowder" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="0.55" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_stonepowder.png" />
+            <textures   diffuse ="fillPlanesTP/fruit_tp_ground_texture/stonepowder_diffuse.dds"
+                        normal  ="fillPlanesTP/fruit_tp_ground_texture/stonepowder_normal.dds"
+                        specular="$data/fillPlanes/stone_specular.png"
+                        distance="fillPlanesTP/fruit_tp_ground_texture/stonepowderDistance_diffuse.dds" />
+        </fillType>
+        <fillType name="STEEL" title="$l10n_fillType_steel" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="35" />
+             <economy pricePerLiter="2.85">
+                <factors>
+                    <factor period="1"  value="1.08" />
+                    <factor period="2"  value="1.07" />
+                    <factor period="3"  value="1.05" />
+                    <factor period="4"  value="0.97" />
+                    <factor period="5"  value="0.94" />
+                    <factor period="6"  value="0.99" />
+                    <factor period="7"  value="1.10" />
+                    <factor period="8"  value="1.11" />
+                    <factor period="9"  value="1.06" />
+                    <factor period="10" value="0.95" />
+                    <factor period="11" value="0.91" />
+                    <factor period="12" value="0.99" />
+                </factors>
+            </economy>
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_steel.png" />
+			<pallet     filename="maps/placeables/steelprocessor22/steelpallet.xml" />
+        </fillType>	
+        <fillType name="GOLD" title="$l10n_fillType_gold" showOnPriceTable="true">
+            <physics massPerLiter="0,001" maxPhysicalSurfaceAngle="0" />
+            <economy pricePerLiter="42.0" >
+			    <factors>
+                    <factor period="1"  value="0.88" />
+                    <factor period="2"  value="0.92" />
+                    <factor period="3"  value="1.02" />
+                    <factor period="4"  value="1.04" />
+                    <factor period="5"  value="1.10" />
+                    <factor period="6"  value="1.03" />
+                    <factor period="7"  value="1.01" />
+                    <factor period="8"  value="0.97" />
+                    <factor period="9"  value="0.95" />
+                    <factor period="10" value="0.93" />
+                    <factor period="11" value="0.91" />
+                    <factor period="12" value="0.90" />
+                </factors>
+			</economy>
+            </economy>
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_gold.png" />
+			<pallet     filename="maps/placeables/goldprocessor22/goldbox.xml" />
+        </fillType>	
+        <fillType name="GARDENSTONES" title="$l10n_fillType_gardenstones" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="0.75" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_gardenstones.png" />
+			 <pallet     filename="maps/placeables/brickprocessor22/brickspallet.xml" />
+        </fillType>	
+        <fillType name="BRICKS" title="$l10n_fillType_bricks" showOnPriceTable="true">
+            <physics massPerLiter="0.1" maxPhysicalSurfaceAngle="0" />
+            <economy pricePerLiter="0.6" >
+			  <factors>
+                    <factor period="1"  value="1.08" />
+                    <factor period="2"  value="1.07" />
+                    <factor period="3"  value="1.05" />
+                    <factor period="4"  value="0.97" />
+                    <factor period="5"  value="0.94" />
+                    <factor period="6"  value="0.99" />
+                    <factor period="7"  value="1.10" />
+                    <factor period="8"  value="1.11" />
+                    <factor period="9"  value="1.06" />
+                    <factor period="10" value="0.95" />
+                    <factor period="11" value="0.91" />
+                    <factor period="12" value="0.99" />
+                </factors>
+			</economy>
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_bricks.png" />
+			<pallet     filename="maps/placeables/brickprocessor22/brickspallet.xml" />
+        </fillType>		
+		<fillType name="LITHIUMORE" title="$l10n_fillType_lithiumore" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="0.65" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_lithiumore.png" />
+            <textures   diffuse ="fillPlanesTP/fruit_tp_ground_texture/lithiumore_diffuse.dds"
+                        normal  ="fillPlanesTP/fruit_tp_ground_texture/lithiumore_normal.dds"
+                        specular="$data/fillPlanes/stone_specular.png"
+                        distance="fillPlanesTP/fruit_tp_ground_texture/lithiumoreDistance_diffuse.dds" />
+        </fillType>	
+		<fillType name="LITHIUM" title="$l10n_fillType_lithium" showOnPriceTable="true"  unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="3.05" >
+			 <factors>
+                    <factor period="1"  value="1.08" />
+                    <factor period="2"  value="1.07" />
+                    <factor period="3"  value="1.05" />
+                    <factor period="4"  value="0.97" />
+                    <factor period="5"  value="0.94" />
+                    <factor period="6"  value="0.99" />
+                    <factor period="7"  value="1.10" />
+                    <factor period="8"  value="1.11" />
+                    <factor period="9"  value="1.06" />
+                    <factor period="10" value="0.95" />
+                    <factor period="11" value="0.91" />
+                    <factor period="12" value="0.99" />
+                </factors>
+			</economy>           
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_lithium.png" />
+			 <pallet    filename="maps/placeables/lithiumprocessor22/lithiumpallet.xml" />
+        </fillType>		
+		<fillType name="CRUDEOIL" title="$l10n_fillType_crudeoil" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="0" />
+            <economy pricePerLiter="1.05" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_crudeoil.png" />
+        </fillType>
+		<fillType name="MARBLE" title="$l10n_fillType_marble" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="1.55" >
+            <factors>
+                    <factor period="1"  value="1.08" />
+                    <factor period="2"  value="1.07" />
+                    <factor period="3"  value="1.05" />
+                    <factor period="4"  value="0.97" />
+                    <factor period="5"  value="0.94" />
+                    <factor period="6"  value="0.99" />
+                    <factor period="7"  value="1.10" />
+                    <factor period="8"  value="1.11" />
+                    <factor period="9"  value="1.06" />
+                    <factor period="10" value="0.95" />
+                    <factor period="11" value="0.91" />
+                    <factor period="12" value="0.99" />
+                </factors>
+			</economy>           
+                        <image      hud="fillPlanesTP/fruit_tp_hud/hud_fill_marble.png"/>
+						<pallet     filename="maps/placeables/marbleprocessor22/marble.xml"/>
+        </fillType>	
+		<fillType name="MARBLEPALLETS" title="$l10n_fillType_marblepallets" showOnPriceTable="true"  unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="35" />
+             <economy pricePerLiter="1.55" >
+            <factors>
+                    <factor period="1"  value="1.08" />
+                    <factor period="2"  value="1.07" />
+                    <factor period="3"  value="1.05" />
+                    <factor period="4"  value="0.97" />
+                    <factor period="5"  value="0.94" />
+                    <factor period="6"  value="0.99" />
+                    <factor period="7"  value="1.10" />
+                    <factor period="8"  value="1.11" />
+                    <factor period="9"  value="1.06" />
+                    <factor period="10" value="0.95" />
+                    <factor period="11" value="0.91" />
+                    <factor period="12" value="0.99" />
+                </factors>
+			</economy>           
+                        <image      hud="fillPlanesTP/fruit_tp_hud/hud_fill_marblepallets.png"/>
+						<pallet     filename="maps/placeables/marbleprocessor22/marblepallets.xml"/>
+        </fillType>	
+		<fillType name="CLAY" title="$l10n_fillType_clay" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="0.25" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_clay.png" />
+            <textures   diffuse ="fillPlanesTP/fruit_tp_ground_texture/clay_diffuse.dds"
+                        normal  ="fillPlanesTP/fruit_tp_ground_texture/clay_normal.dds"
+                        specular="$data/fillPlanes/stone_specular.png"
+                        distance="fillPlanesTP/fruit_tp_ground_texture/clayDistance_diffuse.dds" />
+        </fillType>	
+		<fillType name="ROCKS" title="$l10n_fillType_rocks" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="35" />
+             <economy pricePerLiter="2.85">
+                <factors>
+                    <factor period="1"  value="1.08" />
+                    <factor period="2"  value="1.07" />
+                    <factor period="3"  value="1.05" />
+                    <factor period="4"  value="0.97" />
+                    <factor period="5"  value="0.94" />
+                    <factor period="6"  value="0.99" />
+                    <factor period="7"  value="1.10" />
+                    <factor period="8"  value="1.11" />
+                    <factor period="9"  value="1.06" />
+                    <factor period="10" value="0.95" />
+                    <factor period="11" value="0.91" />
+                    <factor period="12" value="0.99" />
+                </factors>
+            </economy>
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_rock.png" />
+			<textures   diffuse ="$data/fillPlanes/stone_diffuse.png"
+                        normal  ="$data/fillPlanes/stone_normal.png"
+                        specular="$data/fillPlanes/stone_specular.png"
+                        distance="$data/fillPlanes/distance/stoneDistance_diffuse.png" />
+			<pallet     filename="maps/placeables/rocksprocessor22/rocks.xml" />
+        </fillType>
+        <fillType name="PROPANE" title="$l10n_fillType_propane" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="0" />
+            <economy pricePerLiter="1.05" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_propane.png" />
+        </fillType>	
+        <fillType name="GLASS" title="$l10n_fillType_glass" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="35" />
+             <economy pricePerLiter="2.85">
+                <factors>
+                    <factor period="1"  value="1.08" />
+                    <factor period="2"  value="1.07" />
+                    <factor period="3"  value="1.05" />
+                    <factor period="4"  value="0.97" />
+                    <factor period="5"  value="0.94" />
+                    <factor period="6"  value="0.99" />
+                    <factor period="7"  value="1.10" />
+                    <factor period="8"  value="1.11" />
+                    <factor period="9"  value="1.06" />
+                    <factor period="10" value="0.95" />
+                    <factor period="11" value="0.91" />
+                    <factor period="12" value="0.99" />
+                </factors>
+            </economy>
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_glass.png" />
+			<pallet     filename="maps/placeables/glassfactory/glasspallet.xml" />
+        </fillType>		
+				<fillType name="RUBBLE" title="$l10n_fillType_rubble" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="0.25" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_rubble.png" />
+        <textures   diffuse ="fillPlanesTP/fruit_tp_ground_texture/rubble_diffuse.dds"
+                        normal  ="fillPlanesTP/fruit_tp_ground_texture/rubble_normal.dds"
+                        specular="$data/fillPlanes/stone_specular.png"
+                        distance="fillPlanesTP/fruit_tp_ground_texture/rubbleDistance_diffuse.dds" />
+        </fillType>	
+		        <fillType name="COALPOWDER" title="$l10n_fillType_coalpowder" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="0.55" />
+             <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_coalpowder.png" />
+            <textures   diffuse ="fillPlanesTP/fruit_tp_ground_texture/coalpowder_diffuse.dds"
+                        normal  ="fillPlanesTP/fruit_tp_ground_texture/asphalt_normal.dds"
+                        specular="$data/fillPlanes/stone_specular.png"
+                        distance="fillPlanesTP/fruit_tp_ground_texture/asphaltDistance_diffuse.dds" />
+        </fillType>	
+			    <fillType name="CRUSHEDCOAL" title="$l10n_fillType_crushedcoal" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="0.55" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_crushedcoal.png" />
+            <textures   diffuse ="fillPlanesTP/fruit_tp_ground_texture/crushedcoal_diffuse.dds"
+                        normal  ="fillPlanesTP/fruit_tp_ground_texture/asphalt_normal.dds"
+                        specular="$data/fillPlanes/stone_specular.png"
+                        distance="fillPlanesTP/fruit_tp_ground_texture/asphaltDistance_diffuse.dds" />
+        </fillType>
+			<fillType name="IRONORE" title="$l10n_fillType_ironore" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="1.0"/>
+            <image hud="fillPlanesTP/fruit_tp_hud/hud_fill_ironOre.png" />
+            <textures   diffuse ="fillPlanesTP/fruit_tp_ground_texture/ironOre_diffuse.png"
+                        normal  ="fillPlanesTP/fruit_tp_ground_texture/ironOre_normal.png"
+                        specular="fillPlanesTP/fruit_tp_ground_texture/ironOre_specular.png"
+                        distance="fillPlanesTP/fruit_tp_ground_texture/distance/ironOreDistance_diffuse.png" />
+        </fillType>
+					    <fillType name="CRUSHEDSTONE" title="$l10n_fillType_crushedstone" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="0.55" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_crushedstone.png" />
+            <textures   diffuse ="fillPlanesTP/fruit_tp_ground_texture/crushedstone_diffuse.dds"
+                        normal  ="fillPlanesTP/fruit_tp_ground_texture/ironOre_normal.png"
+                        specular="$data/fillPlanes/stone_specular.png"
+                        distance="fillPlanesTP/fruit_tp_ground_texture/crushedstoneDistance_diffuse.dds" />
+        </fillType>
+					    <fillType name="STONECHIPS" title="$l10n_fillType_stonechips" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="0.55" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_stonechips.png" />
+            <textures   diffuse ="fillPlanesTP/fruit_tp_ground_texture/stonechips_diffuse.dds"
+                        normal  ="fillPlanesTP/fruit_tp_ground_texture/ironOre_normal.png"
+                        specular="$data/fillPlanes/stone_specular.png"
+                        distance="fillPlanesTP/fruit_tp_ground_texture/stonechipsDistance_diffuse.dds" />
+        </fillType>
+		
+    </fillTypes>
+
+    <fillTypeCategories>
+        <fillTypeCategory name="BULK" >WHEAT BARLEY OAT CANOLA SUNFLOWER SOYBEAN MAIZE POTATO SUGARBEET SUGARBEET_CUT MANURE SEEDS FORAGE FORAGE_MIXING CHAFF WOODCHIPS SILAGE STRAW GRASS_WINDROW DRYGRASS_WINDROW SUGARCANE FERTILIZER PIGFOOD LIME SNOW ROADSALT SORGHUM OLIVE STONE MINERAL_FEED ASPHALT TAILINGS CONCRETE LIMESTONE DIRT GRAVEL SAND COAL IRON TOUTVENANT CEMENT RIVERSAND RIVERSANDP TIRES TAR STONEPOWDER LITHIUMORE CRUDEOIL CLAY ROCKS STONE RUBBER RUBBLE COALPOWDER CRUSHEDCOAL IRONORE CRUSHEDSTONE STONECHIPS</fillTypeCategory>
+        <fillTypeCategory name="LIQUID" >TAR CRUDEOIL PROPANE MILK WATER DIESEL DEF</fillTypeCategory>
+        <fillTypeCategory name="PIECE" >WOOL TREESAPLINGS EGG</fillTypeCategory>
+        <fillTypeCategory name="WINDROW" >STRAW DRYGRASS_WINDROW GRASS_WINDROW</fillTypeCategory>
+        <fillTypeCategory name="COMBINE" >WHEAT BARLEY OAT CANOLA SUNFLOWER SOYBEAN MAIZE SORGHUM</fillTypeCategory>
+        <fillTypeCategory name="SPRAYER" >LIQUIDFERTILIZER HERBICIDE</fillTypeCategory>
+        <fillTypeCategory name="SPREADER" >FERTILIZER</fillTypeCategory>
+        <fillTypeCategory name="MIXERWAGON" >FORAGE FORAGE_MIXING DRYGRASS_WINDROW SILAGE STRAW MINERAL_FEED</fillTypeCategory>
+        <fillTypeCategory name="AUGERWAGON" >WHEAT BARLEY OAT CANOLA SOYBEAN SUNFLOWER MAIZE FERTILIZER SEEDS SORGHUM</fillTypeCategory>
+        <fillTypeCategory name="FORAGEWAGON" >STRAW GRASS_WINDROW DRYGRASS_WINDROW CHAFF SILAGE</fillTypeCategory>
+        <fillTypeCategory name="SILAGETRAILER" >STRAW GRASS_WINDROW DRYGRASS_WINDROW CHAFF SILAGE WOODCHIPS SUGARCANE</fillTypeCategory>
+        <fillTypeCategory name="TRAINWAGON" >WHEAT BARLEY OAT CANOLA SUNFLOWER SOYBEAN MAIZE POTATO SUGARBEET SUGARBEET_CUT MANURE SEEDS FORAGE FORAGE_MIXING CHAFF WOODCHIPS SILAGE STRAW GRASS_WINDROW DRYGRASS_WINDROW SUGARCANE FERTILIZER PIGFOOD LIME SNOW ROADSALT SORGHUM OLIVE STONE MINERAL_FEED ASPHALT TAILINGS CONCRETE LIMESTONE DIRT GRAVEL SAND COAL IRON TOUTVENANT CEMENT RIVERSAND RIVERSANDP TIRES TAR STONEPOWDER LITHIUMORE CRUDEOIL CLAY ROCKS STONE RUBBER RUBBLE COALPOWDER CRUSHEDCOAL IRONORE CRUSHEDSTONE STONECHIPS</fillTypeCategory>
+       <fillTypeCategory name="FORAGEHARVESTER" >CHAFF GRASS_WINDROW WOODCHIPS</fillTypeCategory>
+        <fillTypeCategory name="SLURRYTANK" >LIQUIDMANURE DIGESTATE</fillTypeCategory>
+        <fillTypeCategory name="MANURESPREADER" >MANURE</fillTypeCategory>
+        <fillTypeCategory name="FORK" >MANURE SILAGE CHAFF STRAW GRASS_WINDROW DRYGRASS_WINDROW</fillTypeCategory>
+        <fillTypeCategory name="SHOVEL" >WHEAT BARLEY OAT CANOLA SUNFLOWER SOYBEAN MAIZE POTATO SUGARBEET SUGARBEET_CUT MANURE SEEDS FORAGE FORAGE_MIXING CHAFF WOODCHIPS SILAGE STRAW GRASS_WINDROW DRYGRASS_WINDROW SUGARCANE FERTILIZER PIGFOOD LIME SNOW ROADSALT SORGHUM OLIVE STONE MINERAL_FEED ASPHALT TAILINGS CONCRETE LIMESTONE DIRT GRAVEL SAND COAL IRON TOUTVENANT CEMENT RIVERSAND RIVERSANDP TIRES TAR STONEPOWDER LITHIUMORE CLAY ROCKS STONE RUBBER RUBBLE COALPOWDER CRUSHEDCOAL IRONORE CRUSHEDSTONE STONECHIPS</fillTypeCategory>
+       <fillTypeCategory name="ANIMAL" >COW_SWISS_BROWN COW_ANGUS COW_HOLSTEIN COW_LIMOUSIN SHEEP_BLACK_WELSH SHEEP_STEINSCHAF SHEEP_SWISS_MOUNTAIN SHEEP_LANDRACE PIG_LANDRACE PIG_BLACK_PIED PIG_BERKSHIRE CHICKEN CHICKEN_ROOSTER</fillTypeCategory>
+        <fillTypeCategory name="HORSE" >HORSE_PALOMINO HORSE_BLACK HORSE_BAY HORSE_PINTO HORSE_SEAL_BROWN HORSE_GRAY HORSE_DUN HORSE_CHESTNUT</fillTypeCategory>
+        <fillTypeCategory name="FARMSILO" >WHEAT BARLEY OAT CANOLA SUNFLOWER SOYBEAN MAIZE SORGHUM</fillTypeCategory>
+        <fillTypeCategory name="HAYLOFT" >STRAW DRYGRASS_WINDROW</fillTypeCategory>
+        <fillTypeCategory name="LOADINGVEHICLE">WHEAT BARLEY OAT CANOLA SUNFLOWER SOYBEAN MAIZE POTATO SUGARBEET SUGARBEET_CUT MANURE SEEDS FORAGE FORAGE_MIXING CHAFF WOODCHIPS SILAGE STRAW GRASS_WINDROW DRYGRASS_WINDROW SUGARCANE FERTILIZER PIGFOOD LIME SNOW ROADSALT SORGHUM OLIVE STONE MINERAL_FEED ASPHALT TAILINGS CONCRETE LIMESTONE DIRT GRAVEL SAND COAL IRON TOUTVENANT CEMENT RIVERSAND RIVERSANDP TIRES TAR STONEPOWDER LITHIUMORE CRUDEOIL CLAY ROCKS STONE RUBBER RUBBLE COALPOWDER CRUSHEDCOAL IRONORE CRUSHEDSTONE STONECHIPS</fillTypeCategory>
+        <fillTypeCategory name="PRODUCT">FLOUR BREAD CAKE BUTTER CHEESE FABRIC SUGAR CLOTHES CEREAL SUNFLOWER_OIL CANOLA_OIL OLIVE_OIL RAISINS GRAPEJUICE CHOCOLATE BOARDS FURNITURE STRAWBERRY LETTUCE TOMATO EGG GOLD MARBLEPALLETS LITHIUM BRICKS GARDENSTONES STEEL ROCKS GLASS RUBBER</fillTypeCategory>
+        <fillTypeCategory name="PRODUCT_BGA">METHANE ELECTRICCHARGE</fillTypeCategory>
+	</fillTypeCategories>
+	
+
+    <fillTypeSounds>
+        <fillTypeSound isDefault="true">
+            <sound template="DEFAULT_SILO_FILL"/>
+        </fillTypeSound>
+
+        <fillTypeSound fillTypes="LIME">
+            <sound template="dustFill"/>
+        </fillTypeSound>
+
+        <fillTypeSound fillTypes="OAT SUNFLOWER">
+            <sound template="grainSmallFill"/>
+        </fillTypeSound>
+
+        <fillTypeSound fillTypes="WHEAT BARLEY CANOLA SOYBEAN SEEDS FERTILIZER">
+            <sound template="grainMediumFill"/>
+        </fillTypeSound>
+
+        <fillTypeSound fillTypes="MAIZE PIGFOOD">
+            <sound template="grainLargeFill"/>
+        </fillTypeSound>
+
+        <fillTypeSound fillTypes="GRAPE">
+            <sound template="grapeFill"/>
+        </fillTypeSound>
+
+        <fillTypeSound fillTypes="OLIVE">
+            <sound template="oliveFill"/>
+        </fillTypeSound>
+
+        <fillTypeSound fillTypes="WOOL GRASS_WINDROW DRYGRASS_WINDROW ROUNDBALE COTTON">
+            <sound template="grassFill"/>
+        </fillTypeSound>
+
+        <fillTypeSound fillTypes="ROADSALT">
+            <sound template="gravelFill"/>
+        </fillTypeSound>
+
+        <fillTypeSound fillTypes="MANURE">
+            <sound template="manureFill"/>
+        </fillTypeSound>
+
+        <fillTypeSound fillTypes="POTATO SUGARBEET">
+            <sound template="potatoFill"/>
+        </fillTypeSound>
+
+        <fillTypeSound fillTypes="STRAW">
+            <sound template="strawFill"/>
+        </fillTypeSound>
+
+        <fillTypeSound fillTypes="SUGARCANE">
+            <sound template="sugarcaneFill"/>
+        </fillTypeSound>
+
+        <fillTypeSound fillTypes="WOODCHIPS FORAGE CHAFF SILAGE">
+            <sound template="woodchipFill"/>
+        </fillTypeSound>
+
+        <fillTypeSound fillTypes="STONE ASPHALT TAILINGS CONCRETE LIMESTONE DIRT GRAVEL SAND COAL IRON TOUTVENANT CEMENT RIVERSAND RIVERSANDP TIRES STONEPOWDER LITHIUMORE CLAY ROCKS RUBBLE COALPOWDER CRUSHEDCOAL IRONORE CRUSHEDSTONE STONECHIPS">
+            <sound template="ROCKS_UNLOAD"/>
+        </fillTypeSound>
+		
+        <fillTypeSound fillTypes="MILK WATER DIESEL DEF LIQUIDFERTILIZER HERBICIDE LIQUIDMANURE DIGESTATE SILAGE_ADDITIVE">
+            <sound template="DEFAULT_REFUEL_SOUND"/>
+        </fillTypeSound>
+    </fillTypeSounds>
+</map>

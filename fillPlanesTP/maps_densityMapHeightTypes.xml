@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<map>
+    <densityMapHeightTypes>
+		<densityMapHeightType fillTypeName="COAL" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="true" >
+            <collision scale="0.9" baseOffset="0.10" minOffset="0.0" maxOffset="0.08" />
+        </densityMapHeightType>
+		<densityMapHeightType fillTypeName="TAILINGS" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="true" >
+            <collision scale="1.0" baseOffset="0.10" minOffset="0.0" maxOffset="0.08" />
+		</densityMapHeightType>	
+       <densityMapHeightType fillTypeName="RIVERSAND" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="true" >
+            <collision scale="0.9" baseOffset="0.10" minOffset="0.0" maxOffset="0.08" />
+            
+        </densityMapHeightType>	
+		<densityMapHeightType fillTypeName="TOUTVENANT" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="true" >
+            <collision scale="1.0" baseOffset="0.10" minOffset="0.0" maxOffset="0.08" />
+            
+        </densityMapHeightType>
+		<densityMapHeightType fillTypeName="DIRT" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="true" >
+            <collision scale="1.0" baseOffset="0.10" minOffset="0.0" maxOffset="0.08" />
+           
+        </densityMapHeightType>
+		<densityMapHeightType fillTypeName="GRAVEL" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="true" >
+            <collision scale="0.9" baseOffset="0.10" minOffset="0.0" maxOffset="0.08" />
+            
+        </densityMapHeightType>
+		<densityMapHeightType fillTypeName="SAND" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="true" >
+            <collision scale="0.9" baseOffset="0.10" minOffset="0.0" maxOffset="0.08" />
+            
+        </densityMapHeightType>	
+		<densityMapHeightType fillTypeName="LIMESTONE" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="true" >
+            <collision scale="1.0" baseOffset="0.10" minOffset="0.0" maxOffset="0.08" />
+            
+        </densityMapHeightType>
+		<densityMapHeightType fillTypeName="ASPHALT" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="true" >
+            <collision scale="1.0" baseOffset="0.10" minOffset="0.0" maxOffset="0.08" />
+            
+        </densityMapHeightType>
+		<densityMapHeightType fillTypeName="IRON" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="true" >
+            <collision scale="1.0" baseOffset="0.10" minOffset="0.0" maxOffset="0.08" />
+            
+        </densityMapHeightType>
+		<densityMapHeightType fillTypeName="CLAY" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="true" >
+            <collision scale="0.7" baseOffset="0.10" minOffset="0.0" maxOffset="0.08" />
+            
+        </densityMapHeightType>
+		<densityMapHeightType fillTypeName="LITHIUMORE" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="true" >
+            <collision scale="1.0" baseOffset="0.10" minOffset="0.0" maxOffset="0.08" />
+            
+        </densityMapHeightType>
+		<densityMapHeightType fillTypeName="STONEPOWDER" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="true" >
+            <collision scale="0.9" baseOffset="0.10" minOffset="0.0" maxOffset="0.08" />
+            
+		</densityMapHeightType>
+		<densityMapHeightType fillTypeName="TIRES" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="true" >
+            <collision scale="0.9" baseOffset="0.10" minOffset="0.0" maxOffset="0.08" />
+            
+        </densityMapHeightType>
+		<densityMapHeightType fillTypeName="RUBBER" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="true" >
+            <collision scale="0.9" baseOffset="0.10" minOffset="0.0" maxOffset="0.08" />
+            
+        </densityMapHeightType>
+		<densityMapHeightType fillTypeName="RIVERSANDP" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="true" >
+            <collision scale="0.9" baseOffset="0.10" minOffset="0.0" maxOffset="0.08" />
+            
+		</densityMapHeightType>
+		<densityMapHeightType fillTypeName="CEMENT" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="true" >
+            <collision scale="0.9" baseOffset="0.10" minOffset="0.0" maxOffset="0.08" />
+            
+        </densityMapHeightType>
+		<densityMapHeightType fillTypeName="CONCRETE" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="true" >
+            <collision scale="0.9" baseOffset="0.10" minOffset="0.0" maxOffset="0.08" />
+            
+        </densityMapHeightType>
+		<densityMapHeightType fillTypeName="ROCKS" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="true" >
+            <collision scale="0.9" baseOffset="0.10" minOffset="0.0" maxOffset="0.08" />
+            
+        </densityMapHeightType>
+		<densityMapHeightType fillTypeName="RUBBLE" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="true" >
+            <collision scale="0.9" baseOffset="0.10" minOffset="0.0" maxOffset="0.08" />
+            
+        </densityMapHeightType>
+		<densityMapHeightType fillTypeName="CRUSHEDCOAL" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="true" >
+            <collision scale="0.9" baseOffset="0.10" minOffset="0.0" maxOffset="0.08" />
+            
+        </densityMapHeightType>
+		<densityMapHeightType fillTypeName="COALPOWDER" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="true" >
+            <collision scale="0.9" baseOffset="0.10" minOffset="0.0" maxOffset="0.08" />
+            
+        </densityMapHeightType>
+		
+        <densityMapHeightType fillTypeName="CRUSHEDSTONE" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="true">
+            <collision scale="0.9" baseOffset="0.10" minOffset="0.0" maxOffset="0.08" />
+        </densityMapHeightType>
+		
+		<densityMapHeightType fillTypeName="STONECHIPS" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="true">
+            <collision scale="0.9" baseOffset="0.10" minOffset="0.0" maxOffset="0.08" />
+        </densityMapHeightType>
+		
+    </densityMapHeightTypes>
+
+</map>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+<translationContributors>Nonnus Google Translate</translationContributors>
+
+
+<texts>
+		<text name="fillType_sand"			text="모래"					 />
+		<text name="fillType_rocks"			text="바위"			 />
+		<text name="fillType_gravel"		text="자갈"		 />
+		<text name="fillType_dirt"			text="흙"					 />
+		<text name="fillType_limestone"		text="석회암"				 />
+		<text name="fillType_cement"		text="시멘트"			 />
+		<text name="fillType_coal"			text="석탄"			 />
+		<text name="fillType_tailings"		text="찌끼"			 />
+		<text name="fillType_toutvenant"     text="Toutvenant"		 />
+		<text name="fillType_tar"			text="타르"		 />
+		<text name="fillType_asphalt"		text="아스팔트"				 />
+		<text name="fillType_concrete"		text="콘크리트"				 />
+		<text name="fillType_gold"			text="금"			 />
+		<text name="fillType_riversand"		text="강 모래"		 />
+		<text name="fillType_rubber"			text="탄성 고무"			 />
+		<text name="fillType_riversandp"		text="깨끗한 강 모래"	 />
+		<text name="fillType_stonepowder"	text="스톤 파우더"		 />
+		<text name="fillType_gardenstones"	text="정원 돌"	 />
+		<text name="fillType_tires"			text="타이어"				 />
+		<text name="fillType_iron"			text="철"			 />
+		<text name="fillType_steel"				text="강철"				 />
+		<text name="fillType_lithium"		text="리튬"			 />
+		<text name="fillType_lithiumore"	text="리튬 광석" />
+		<text name="fillType_clay"			text="점토"			 />
+		<text name="fillType_bricks"		   text="벽돌"	     />
+		<text name="fillType_crudeoil"		text="원유"		 />
+		<text name="fillType_marble"		     text="대리석"				 />
+		<text name="fillType_marblepallets"	     text="대리석 시트" />
+		<text name="fillType_propane"			text="프로판 가스"			 />
+		<text name="fillType_coalpowder"		    text="석탄 가루"	     />
+		<text name="fillType_crushedcoal"		text="으깬 석탄"			 />	
+		<text name="fillType_ironore"			text="철광석"			 />
+		<text name="fillType_glass"			text="유리"			 />
+		<text name="fillType_rubble"			text="파편"			 />
+		<text name="fillType_crushedstone"			text="깔린 돌"/>
+		<text name="fillType_stonechips"			text="스톤칩"			 />
+		<text name="sellingStationContainers" text="컨테이너 창고"			 />
+</texts>
+
+
+</l10n>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="sellingStation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>Vente Fruit TP</name>
+        <image>storeBrand.png</image>
+        <price>8000</price>
+        <canBeSold>true</canBeSold>
+        <showInStore>true</showInStore>
+        <rotation>0</rotation>
+        <brand>LIZARD</brand>
+        <species>placeable</species>
+        <category>sellingPoints</category>
+		
+		 <brush>
+            <type>placeable</type>
+            <category>production</category>
+            <tab>sellingPoints</tab>
+        </brush>
+		
+		<vertexBufferMemoryUsage>78164</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>18648</indexBufferMemoryUsage>
+        <textureMemoryUsage>1485904</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <base>
+        <filename>Trigger_Vente.i3d</filename>
+    </base>
+
+    <placement useRandomYRotation="false" useManualYRotation="true" />
+
+    <hotspots>
+        <hotspot type="UNLOADING" linkNode="unloadMarker" teleportNode="teleportNode"/>
+    </hotspots>
+
+    <triggerMarkers>
+        <triggerMarker node="unloadMarker"  filename="$data/shared/assets/marker/markerIcons.xml" id="UNLOAD" adjustToGround="true" />
+    </triggerMarkers>
+
+    <sellingStation supportsExtension="false" litersForFullPriceDrop="100000" fullPriceRecoverHours="48" >
+        <unloadTrigger exactFillRootNode="unloadTrigger" fillTypes="DIRT DIRT1 DIRT_VEGETAL SAND GRAVEL ASPHALT CONCRETE CEMENT ROCK CONCASSE STONE WHEAT BARLEY CANOLA SUNFLOWER SOYBEAN MAIZE POTATO SUGARBEET SUGARCANE COTTON ASPHALT LIMESTONE LIME GOLD LITHIUM BRICKS CONCRETE CEMENT STONE COAL TAILINGS DIRT GRAVEL SAND IRON TOUTVENANT RIVERSAND RIVERSANDP RUBBER TIRES TAR STONEPOWDER STEEL GARDENSTONES LITHIUMORE CRUDEOIL MARBLE MARBLEPALLETS CLAY ROCKS RUBBLE PROPANE CRUSHEDCOAL COALPOWDER IRONORE CRUSHEDSTONE STONECHIPS TOPSOIL DIRT SAND CONCRETE ASPHALT ASPHALTMill MUD CRUSH GRAVEL CEMENT GRAVEL030 CLAY GRAVEL02 ROCKYMUD LASTRE REDASPHALT RECLAIMEDBRICK COMPOST" />
+
+        <fillType name="DIRT" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="DIRT1" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="DIRT_VEGETAL" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="SAND" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="GRAVEL" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="ASPHALT" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="CONCRETE" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="CEMENT" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="ROCK" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="CONCASSE" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="STONE"     priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="wheat"            priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="barley"           priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="canola"           priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="sunflower"        priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="soybean"          priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="maize"            priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="potato"           priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="sugarBeet"        priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="sugarCane"        priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="cotton"           priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="asphalt"          priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="limestone"        priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="lime"             priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="gold"             priceScale="1000" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="lithium"          priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="bricks"           priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="concrete"         priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="cement"           priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="stone"            priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="coal"             priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="tailings"         priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="dirt"             priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="gravel"           priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="sand"             priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="iron"             priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="toutvenant"       priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="riversand"        priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="riversandp"       priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="rubber"           priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="tires"            priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="tar"              priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="stonepowder"      priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="steel"            priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="gardenstones"     priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="lithiumore"       priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="crudeoil"         priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="marble"           priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="marblepallets"    priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="clay"             priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="rocks"            priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="rubble"           priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="propane"          priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="crushedcoal"      priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="coalpowder"       priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="ironore"          priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="CRUSHEDSTONE"     priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="STONECHIPS"       priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="TOPSOIL"            priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="DIRT"           priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="SAND"           priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="CONCRETE"        priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="ASPHALT"          priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="ASPHALTMill"            priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="MUD"           priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="CRUSH"        priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="GRAVEL"        priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="CEMENT"           priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="GRAVEL030"           priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="CLAY"           priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="GRAVEL02"           priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="ROCKYMUD"           priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="LASTRE"           priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="REDASPHALT"           priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="RECLAIMEDBRICK"           priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="COMPOST"           priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />		
+    </sellingStation>
+	
+	<clearAreas/>
+    <leveling/>
+    <indoorAreas/>
+	<ai>
+	<updateAreas/>
+	</ai>
+
+    <i3dMappings>
+        <i3dMapping id="unloadMarker" node="0>0|0|0|0" />
+		<i3dMapping id="teleportNode" node="0>0|1" />
+		<i3dMapping id="unloadTrigger" node="0>0|0|0" />
+    </i3dMappings>
+</placeable>

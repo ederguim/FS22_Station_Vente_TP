@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="63">
+    <author>Dyjomodding</author>
+    <version>1.0.0.0</version>
+    <iconFilename>storeBrand.png</iconFilename>
+    <title>
+        <en>Station de vente TP</en>
+        <de>Station de vente TP</de>
+        <fr>Station de vente TP</fr>
+    </title>
+    <description>
+        <en><![CDATA[Sales station material tp. Here you can sell all material Tp.
+
+Price:  8.000€
+
+
+- does not support the season mod.]]></en>
+
+        <de><![CDATA[Verkaufsstelle Material tp. Hier können Sie das gesamte Tp-Material verkaufen.
+
+Preis: 8.000€
+
+
+- verträgt den Saisonmodus nicht.]]></de>
+
+        <fr><![CDATA[Station de vente TP
+
+Prix:   8.000€
+
+
+- ne supporte pas le mod de saisons.]]></fr>
+
+
+    </description>
+    <l10n filenamePrefix="translations/l10n"/>
+	<fillTypes filename="fillPlanesTP/maps_fillTypes.xml"/>
+	<fillTypes filename="fillPlanesTP/GameplayExtension_fillTypes.xml"/>
+    <densityMapHeightTypes filename="fillPlanesTP/maps_densityMapHeightTypes.xml"/>
+    <multiplayer supported="true"/>
+    <storeItems>
+        <storeItem rootNode="placeable" xmlFilename="station_vente_tp.xml"/>
+        
+    </storeItems>
+    <brands>
+        <brand name="lizard" title="lizard" image="storeBrand"/>
+    </brands>
+    <l10n>
+        
+        <text name="name_MultiSellingStation">
+            <en>Sales station material tp</en>
+            <de>Verkaufsstelle Material tp</de>
+            <fr>Station de vente TP</fr>
+        </text>
+        
+        <text name="function_MultiSellingStation">
+            <en>Here you can sell all material Tp.</en>
+            <de>Hier können Sie das gesamte Tp-Material verkaufen.</de>
+            <fr>Vente TP</fr>
+        </text>
+        <text name="GrainExpress">
+            <en>silo To Tp</en>
+            <de>silo À Tp </de>
+            <fr>silo À Tp</fr>
+        </text>
+        
+    </l10n>
+</modDesc>

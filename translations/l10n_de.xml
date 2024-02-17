@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+<translationContributors>DancerVlt69 Nonnus</translationContributors>
+		
+		   <texts>
+		<text name="fillType_sand"			text="Sand"				 />
+		<text name="fillType_rocks"			text="Felsen"			 />
+		<text name="fillType_gravel"		text="Schotter"			 />
+		<text name="fillType_dirt"			text="Erde"				 />
+		<text name="fillType_limestone"		text="Kalkstein"			 />
+		<text name="fillType_cement"		text="Zement"			 />
+		<text name="fillType_coal"			text="Kohle"			 />
+		<text name="fillType_tailings"		text="Rückstände"	 />
+		<text name="fillType_toutvenant"     text="Toutvenant"		 />
+		<text name="fillType_tar"			text="Teer"				 />
+		<text name="fillType_asphalt"		text="Asphalt"			 />
+		<text name="fillType_concrete"		text="Beton"			 />
+		<text name="fillType_gold"			text="Gold"			 />
+		<text name="fillType_riversand"		text="Flusssand"		 />
+		<text name="fillType_rubber"			text="Gummi"			 />
+		<text name="fillType_riversandp"		text="Gerein. Flusssand"	 />
+		<text name="fillType_stonepowder"	text="Steinpulver"		 />
+		<text name="fillType_gardenstones"	text="Pflastersteine" />
+		<text name="fillType_tires"			text="Reifen"			 />
+		<text name="fillType_iron"			text="Eisen"				 />
+		<text name="fillType_steel"			text="Stahl"				 />
+		<text name="fillType_lithium"		text="Lithium"				 />
+		<text name="fillType_lithiumore"	 text="Lithuimerz"	 />
+		<text name="fillType_clay"			text="Ton"			 />
+		<text name="fillType_bricks"		     text="Ziegel"	     />
+		<text name="fillType_crudeoil"		text="Rohöl"		 />
+		<text name="fillType_marble"		    text="Marmor"			 />
+		<text name="fillType_marblepallets"	text="Marmorplatten" />
+		<text name="fillType_propane"			text="Propangas"			 />
+		<text name="fillType_coalpowder"		    text="Kohlepulver"	     />
+		<text name="fillType_crushedcoal"		text="Zerkleinerte Kohle"			 />	
+		<text name="fillType_ironore"			text="Eisenerz"			 />
+		<text name="fillType_glass"			text="Glas"			 />
+		<text name="fillType_rubble"			text="Schutt"			 />
+		<text name="fillType_crushedstone"			text="Zerkleinerte Stein"/>
+		<text name="fillType_stonechips"			text="Stein Chips"			 />
+		<text name="sellingStationContainers" text="Container Lagerhaus"			 />
+</texts>
+
+</l10n>

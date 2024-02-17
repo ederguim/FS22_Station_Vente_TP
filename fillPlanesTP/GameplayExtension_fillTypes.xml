@@ -1,0 +1,662 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<map xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="$data/shared/xml/schema/fillTypes.xsd">
+    <fillTypeConverters>
+        <fillTypeConverter name="MILLING">
+            <converter from="DIRT"        to="ASPHALTMill" factor="1.2" />
+        </fillTypeConverter>
+        <fillTypeConverter name="CRUSHER">
+            <converter from="ROCK"              to="LASTRE" factor="1.0" />
+            <converter from="CONCRETE"          to="RECLAIMEDBRICK" factor="1.0" />
+            <converter from="LASTRE"            to="CRUSH" factor="1.0" />
+            <converter from="BORDER"            to="RECLAIMEDBRICK" factor="80" />
+            <converter from="BLOCK"             to="CRUSH" factor="80" />
+            <converter from="BRICK"             to="RECLAIMEDBRICK" factor="20" />
+            <converter from="ASPHALTMill"       to="RECLAIMEDBRICK" factor="1" />
+        </fillTypeConverter>
+        <fillTypeConverter name="SIEVE">
+            <converter from="CRUSH"             to="GRAVEL030" factor="1" />
+            <converter from="GRAVEL030"         to="GRAVEL1430" factor="1" />
+            <converter from="GRAVEL1430"         to="GRAVEL" factor="1" />
+            <converter from="STONE"         to="GRAVEL" factor="1" />
+            <converter from="GRAVEL"            to="GRAVEL27" factor="1" />
+            <converter from="GRAVEL27"            to="GRAVEL02" factor="1" />
+            <converter from="DIRT"              to="TOPSOIL" factor="0.9" />
+            <converter from="RECLAIMEDBRICK"    to="GRAVEL02" factor="0.9" />
+        </fillTypeConverter>
+        <fillTypeConverter name="WOODPRODUCTION">
+            <converter from="woodChips"        to="WOODWAFER" factor="1.2" />
+        </fillTypeConverter>
+    </fillTypeConverters>
+
+    <fillTypes>
+       <fillType name="TOPSOIL" title="$l10n_fillType_Topsoil" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="32" />
+            <economy pricePerLiter="0.06" >
+                <factors>
+                    <factor period="1"  value="1.00" />
+                    <factor period="2"  value="1.07" />
+                    <factor period="3"  value="0.99" />
+                    <factor period="4"  value="0.94" />
+                    <factor period="5"  value="0.85" />
+                    <factor period="6"  value="0.81" />
+                    <factor period="7"  value="0.86" />
+                    <factor period="8"  value="0.99" />
+                    <factor period="9"  value="1.08" />
+                    <factor period="10" value="1.13" />
+                    <factor period="11" value="1.21" />
+                    <factor period="12" value="1.08" />
+                </factors>
+            </economy>
+            <image      hud     ="textures/hud/hud_fill_Topsoil.dds" />
+            <textures   diffuse ="textures/terrain/topsoil_diffuse.dds"
+                        normal  ="textures/terrain/topsoil_normal.dds"
+                        specular="textures/terrain/topsoil_specular.dds"
+                        distance="textures/terrain/distance/topsoil_diffuse.dds" />
+        </fillType>
+
+        <fillType name="DIRT" title="$l10n_fillType_Dirt" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.95" maxPhysicalSurfaceAngle="32" />
+            <economy pricePerLiter="0.024" >
+                <factors>
+                    <factor period="1"  value="1.00" />
+                    <factor period="2"  value="1.07" />
+                    <factor period="3"  value="0.99" />
+                    <factor period="4"  value="0.94" />
+                    <factor period="5"  value="0.85" />
+                    <factor period="6"  value="0.81" />
+                    <factor period="7"  value="0.86" />
+                    <factor period="8"  value="0.99" />
+                    <factor period="9"  value="1.08" />
+                    <factor period="10" value="1.13" />
+                    <factor period="11" value="1.21" />
+                    <factor period="12" value="1.08" />
+                </factors>
+            </economy>
+            <image      hud     ="textures/hud/hud_fill_Dirt.dds" />
+            <textures   diffuse ="textures/terrain/Dirt_diffuse.dds"
+                        normal  ="textures/terrain/Dirt_normal.dds"
+                        specular="textures/terrain/Dirt_specular.dds"
+                        distance="textures/terrain/distance/Dirt_diffuse.dds" />
+        </fillType>
+
+        <fillType name="SAND" title="$l10n_fillType_Sand" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.5" maxPhysicalSurfaceAngle="32" />
+            <economy pricePerLiter="0.04" >
+                <factors>
+                    <factor period="1"  value="1.00" />
+                    <factor period="2"  value="1.07" />
+                    <factor period="3"  value="0.99" />
+                    <factor period="4"  value="0.94" />
+                    <factor period="5"  value="0.85" />
+                    <factor period="6"  value="0.81" />
+                    <factor period="7"  value="0.86" />
+                    <factor period="8"  value="0.99" />
+                    <factor period="9"  value="1.08" />
+                    <factor period="10" value="1.13" />
+                    <factor period="11" value="1.21" />
+                    <factor period="12" value="1.08" />
+                </factors>
+            </economy>
+            <image      hud     ="textures/hud/hud_fill_Sand.dds" />
+            <textures   diffuse ="textures/terrain/Sand_diffuse.dds"
+                        normal  ="textures/terrain/Sand_normal.dds"
+                        specular="textures/terrain/Sand_specular.dds"
+                        distance="textures/terrain/distance/Sand_diffuse.dds" />
+        </fillType>
+
+        <fillType name="CONCRETE" title="$l10n_fillType_Concrete" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.4" maxPhysicalSurfaceAngle="32" />
+            <economy pricePerLiter="1.36" >
+                <factors>
+                    <factor period="1"  value="1.00" />
+                    <factor period="2"  value="1.07" />
+                    <factor period="3"  value="0.99" />
+                    <factor period="4"  value="0.94" />
+                    <factor period="5"  value="0.85" />
+                    <factor period="6"  value="0.81" />
+                    <factor period="7"  value="0.86" />
+                    <factor period="8"  value="0.99" />
+                    <factor period="9"  value="1.08" />
+                    <factor period="10" value="1.13" />
+                    <factor period="11" value="1.21" />
+                    <factor period="12" value="1.08" />
+                </factors>
+            </economy>
+            <image      hud     ="textures/hud/hud_fill_Concrete.dds" />
+            <textures   diffuse ="textures/terrain/Concrete_diffuse.dds"
+                        normal  ="textures/terrain/Concrete_normal.dds"
+                        specular="textures/terrain/Concrete_specular.dds"
+                        distance="textures/terrain/distance/Concrete_diffuse.dds" />
+        </fillType>
+
+        <fillType name="CEMENT" title="$l10n_fillType_Cement" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.9" maxPhysicalSurfaceAngle="32" />
+            <economy pricePerLiter="0.044" >
+                <factors>
+                    <factor period="1"  value="1.00" />
+                    <factor period="2"  value="1.07" />
+                    <factor period="3"  value="0.99" />
+                    <factor period="4"  value="0.94" />
+                    <factor period="5"  value="0.85" />
+                    <factor period="6"  value="0.81" />
+                    <factor period="7"  value="0.86" />
+                    <factor period="8"  value="0.99" />
+                    <factor period="9"  value="1.08" />
+                    <factor period="10" value="1.13" />
+                    <factor period="11" value="1.21" />
+                    <factor period="12" value="1.08" />
+                </factors>
+            </economy>
+            <image      hud     ="textures/hud/hud_fill_Cement.dds" />
+                <pallet     filename="xml/elements/pallettes/PalletteCement.xml" />
+            <textures   diffuse ="textures/terrain/Cement_diffuse.dds"
+                        normal  ="textures/terrain/Cement_normal.dds"
+                        specular="textures/terrain/Cement_specular.dds"
+                        distance="textures/terrain/distance/Cement_diffuse.dds" />
+        </fillType>
+
+        <fillType name="ASPHALT" title="$l10n_fillType_Asphalt" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="1.2" maxPhysicalSurfaceAngle="32" />
+            <economy pricePerLiter="0.128" >
+                <factors>
+                    <factor period="1"  value="1.00" />
+                    <factor period="2"  value="1.07" />
+                    <factor period="3"  value="0.99" />
+                    <factor period="4"  value="0.94" />
+                    <factor period="5"  value="0.85" />
+                    <factor period="6"  value="0.81" />
+                    <factor period="7"  value="0.86" />
+                    <factor period="8"  value="0.99" />
+                    <factor period="9"  value="1.08" />
+                    <factor period="10" value="1.13" />
+                    <factor period="11" value="1.21" />
+                    <factor period="12" value="1.08" />
+                </factors>
+            </economy>
+            <image      hud     ="textures/hud/hud_fill_Asphalt.dds" />
+            <textures   diffuse ="textures/terrain/Asphalt_diffuse.dds"
+                        normal  ="textures/terrain/Asphalt_normal.dds"
+                        specular="textures/terrain/Asphalt_specular.dds"
+                        distance="textures/terrain/distance/Asphalt_diffuse.dds" />
+        </fillType>
+        
+        <fillType name="REDASPHALT" title="$l10n_fillType_RedAsphalt" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="1.2" maxPhysicalSurfaceAngle="32" />
+            <economy pricePerLiter="0.14" >
+                <factors>
+                    <factor period="1"  value="1.00" />
+                    <factor period="2"  value="1.07" />
+                    <factor period="3"  value="0.99" />
+                    <factor period="4"  value="0.94" />
+                    <factor period="5"  value="0.85" />
+                    <factor period="6"  value="0.81" />
+                    <factor period="7"  value="0.86" />
+                    <factor period="8"  value="0.99" />
+                    <factor period="9"  value="1.08" />
+                    <factor period="10" value="1.13" />
+                    <factor period="11" value="1.21" />
+                    <factor period="12" value="1.08" />
+                </factors>
+            </economy>
+            <image      hud     ="textures/hud/hud_fill_RedAsphalt.dds" />
+            <textures   diffuse ="textures/terrain/RedAsphalt_diffuse.dds"
+                        normal  ="textures/terrain/RedAsphalt_normal.dds"
+                        specular="textures/terrain/RedAsphalt_specular.dds"
+                        distance="textures/terrain/distance/Asphalt_diffuse.dds" />
+        </fillType>
+
+        <fillType name="ASPHALTMill" title="$l10n_fillType_AsphaltMill" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.7" maxPhysicalSurfaceAngle="32" />
+            <economy pricePerLiter="0.03" >
+                <factors>
+                    <factor period="1"  value="1.00" />
+                    <factor period="2"  value="1.07" />
+                    <factor period="3"  value="0.99" />
+                    <factor period="4"  value="0.94" />
+                    <factor period="5"  value="0.85" />
+                    <factor period="6"  value="0.81" />
+                    <factor period="7"  value="0.86" />
+                    <factor period="8"  value="0.99" />
+                    <factor period="9"  value="1.08" />
+                    <factor period="10" value="1.13" />
+                    <factor period="11" value="1.21" />
+                    <factor period="12" value="1.08" />
+                </factors>
+            </economy>
+            <image      hud     ="textures/hud/hud_fill_AsphaltMill.dds" />
+            <textures   diffuse ="textures/terrain/Asphalt_diffuse.dds"
+                        normal  ="textures/terrain/AsphaltMill_normal.dds"
+                        specular="textures/terrain/AsphaltMill_specular.dds"
+                        distance="textures/terrain/distance/Asphalt_diffuse.dds" />
+        </fillType>
+
+        <fillType name="MUD" title="$l10n_fillType_Mud" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="1" maxPhysicalSurfaceAngle="32" />
+            <economy pricePerLiter="-0.035" >
+                <factors>
+                    <factor period="1"  value="1.00" />
+                    <factor period="2"  value="1.07" />
+                    <factor period="3"  value="0.99" />
+                    <factor period="4"  value="0.94" />
+                    <factor period="5"  value="0.85" />
+                    <factor period="6"  value="0.81" />
+                    <factor period="7"  value="0.86" />
+                    <factor period="8"  value="0.99" />
+                    <factor period="9"  value="1.08" />
+                    <factor period="10" value="1.13" />
+                    <factor period="11" value="1.21" />
+                    <factor period="12" value="1.08" />
+                </factors>
+            </economy>
+            <image      hud     ="textures/hud/hud_fill_Muds.dds" />
+            <textures   diffuse ="textures/terrain/Mud_diffuse.dds"
+                        normal  ="textures/terrain/Mud_normal.dds"
+                        specular="textures/terrain/Mud_specular.dds"
+                        distance="textures/terrain/distance/Mud_diffuse.dds" />
+        </fillType>
+        
+        <fillType name="ROCKYMUD" title="$l10n_fillType_RockMud" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="1" maxPhysicalSurfaceAngle="32" />
+            <economy pricePerLiter="-0.04" >
+                <factors>
+                    <factor period="1"  value="1.00" />
+                    <factor period="2"  value="1.07" />
+                    <factor period="3"  value="0.99" />
+                    <factor period="4"  value="0.94" />
+                    <factor period="5"  value="0.85" />
+                    <factor period="6"  value="0.81" />
+                    <factor period="7"  value="0.86" />
+                    <factor period="8"  value="0.99" />
+                    <factor period="9"  value="1.08" />
+                    <factor period="10" value="1.13" />
+                    <factor period="11" value="1.21" />
+                    <factor period="12" value="1.08" />
+                </factors>
+            </economy>
+            <image      hud     ="textures/hud/hud_fill_RockyMuds.dds" />
+            <textures   diffuse ="textures/terrain/RockyMud_diffuse.dds"
+                        normal  ="textures/terrain/RockyMud_normal.dds"
+                        specular="textures/terrain/RockyMud_specular.dds"
+                        distance="textures/terrain/distance/Mud_diffuse.dds" />
+        </fillType>
+
+        <fillType name="CRUSH" title="$l10n_fillType_Crush" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.85" maxPhysicalSurfaceAngle="32" />
+            <economy pricePerLiter="0.034" >
+                <factors>
+                    <factor period="1"  value="1.00" />
+                    <factor period="2"  value="1.07" />
+                    <factor period="3"  value="0.99" />
+                    <factor period="4"  value="0.94" />
+                    <factor period="5"  value="0.85" />
+                    <factor period="6"  value="0.81" />
+                    <factor period="7"  value="0.86" />
+                    <factor period="8"  value="0.99" />
+                    <factor period="9"  value="1.08" />
+                    <factor period="10" value="1.13" />
+                    <factor period="11" value="1.21" />
+                    <factor period="12" value="1.08" />
+                </factors>
+            </economy>
+            <image      hud     ="textures/hud/hud_fill_Crush.dds" />
+            <textures   diffuse ="textures/terrain/Crush_diffuse.dds"
+                        normal  ="textures/terrain/Crush_normal.dds"
+                        specular="textures/terrain/Crush_specular.dds"
+                        distance="textures/terrain/distance/Crush_diffuse.dds" />
+        </fillType>
+
+        <fillType name="GRAVEL" title="$l10n_fillType_Gravel714" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="32" />
+            <economy pricePerLiter="0.06" >
+                <factors>
+                    <factor period="1"  value="1.00" />
+                    <factor period="2"  value="1.07" />
+                    <factor period="3"  value="0.99" />
+                    <factor period="4"  value="0.94" />
+                    <factor period="5"  value="0.85" />
+                    <factor period="6"  value="0.81" />
+                    <factor period="7"  value="0.86" />
+                    <factor period="8"  value="0.99" />
+                    <factor period="9"  value="1.08" />
+                    <factor period="10" value="1.13" />
+                    <factor period="11" value="1.21" />
+                    <factor period="12" value="1.08" />
+                </factors>
+            </economy>
+            <image      hud     ="textures/hud/hud_fill_Gravel.dds" />
+            <textures   diffuse ="textures/terrain/Gravel714_diffuse.dds"
+                        normal  ="textures/terrain/Gravel714_normal.dds"
+                        specular="textures/terrain/Gravel714_specular.dds"
+                        distance="textures/terrain/distance/Gravel714_diffuse.dds" />
+        </fillType>
+
+        <fillType name="GRAVEL030" title="$l10n_fillType_Gravel030" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="32" />
+            <economy pricePerLiter="0.04" >
+                <factors>
+                    <factor period="1"  value="1.00" />
+                    <factor period="2"  value="1.07" />
+                    <factor period="3"  value="0.99" />
+                    <factor period="4"  value="0.94" />
+                    <factor period="5"  value="0.85" />
+                    <factor period="6"  value="0.81" />
+                    <factor period="7"  value="0.86" />
+                    <factor period="8"  value="0.99" />
+                    <factor period="9"  value="1.08" />
+                    <factor period="10" value="1.13" />
+                    <factor period="11" value="1.21" />
+                    <factor period="12" value="1.08" />
+                </factors>
+            </economy>
+            <image      hud     ="textures/hud/hud_fill_Gravel030.dds" />
+            <textures   diffuse ="textures/terrain/Gravel030_diffuse.dds"
+                        normal  ="textures/terrain/Gravel030_normal.dds"
+                        specular="textures/terrain/Gravel030_specular.dds"
+                        distance="textures/terrain/distance/Gravel030_diffuse.dds" />
+        </fillType>
+
+        <fillType name="GRAVEL27" title="$l10n_fillType_Gravel27" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="32" />
+            <economy pricePerLiter="0.04" >
+                <factors>
+                    <factor period="1"  value="1.00" />
+                    <factor period="2"  value="1.07" />
+                    <factor period="3"  value="0.99" />
+                    <factor period="4"  value="0.94" />
+                    <factor period="5"  value="0.85" />
+                    <factor period="6"  value="0.81" />
+                    <factor period="7"  value="0.86" />
+                    <factor period="8"  value="0.99" />
+                    <factor period="9"  value="1.08" />
+                    <factor period="10" value="1.13" />
+                    <factor period="11" value="1.21" />
+                    <factor period="12" value="1.08" />
+                </factors>
+            </economy>
+            <image      hud     ="textures/hud/hud_fill_Gravel27.dds" />
+            <textures   diffuse ="textures/terrain/Gravel27_diffuse.dds"
+                        normal  ="textures/terrain/Gravel27_normal.dds"
+                        specular="textures/terrain/Gravel27_specular.dds"
+                        distance="textures/terrain/distance/Gravel030_diffuse.dds" />
+        </fillType>
+
+        <fillType name="GRAVEL02" title="$l10n_fillType_Gravel02" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="32" />
+            <economy pricePerLiter="0.07" >
+                <factors>
+                    <factor period="1"  value="1.00" />
+                    <factor period="2"  value="1.07" />
+                    <factor period="3"  value="0.99" />
+                    <factor period="4"  value="0.94" />
+                    <factor period="5"  value="0.85" />
+                    <factor period="6"  value="0.81" />
+                    <factor period="7"  value="0.86" />
+                    <factor period="8"  value="0.99" />
+                    <factor period="9"  value="1.08" />
+                    <factor period="10" value="1.13" />
+                    <factor period="11" value="1.21" />
+                    <factor period="12" value="1.08" />
+                </factors>
+            </economy>
+            <image      hud     ="textures/hud/hud_fill_Gravel02.dds" />
+            <textures   diffuse ="textures/terrain/Gravel02_diffuse.dds"
+                        normal  ="textures/terrain/Gravel02_normal.dds"
+                        specular="textures/terrain/Gravel02_specular.dds"
+                        distance="textures/terrain/distance/Gravel030_diffuse.dds" />
+        </fillType>
+
+        <fillType name="GRAVEL1430" title="$l10n_fillType_Gravel1430" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="32" />
+            <economy pricePerLiter="0.07" >
+                <factors>
+                    <factor period="1"  value="1.00" />
+                    <factor period="2"  value="1.07" />
+                    <factor period="3"  value="0.99" />
+                    <factor period="4"  value="0.94" />
+                    <factor period="5"  value="0.85" />
+                    <factor period="6"  value="0.81" />
+                    <factor period="7"  value="0.86" />
+                    <factor period="8"  value="0.99" />
+                    <factor period="9"  value="1.08" />
+                    <factor period="10" value="1.13" />
+                    <factor period="11" value="1.21" />
+                    <factor period="12" value="1.08" />
+                </factors>
+            </economy>
+            <image      hud     ="textures/hud/hud_fill_Gravel1430.dds" />
+            <textures   diffuse ="textures/terrain/Gravel1430_diffuse.dds"
+                        normal  ="textures/terrain/Gravel1430_normal.dds"
+                        specular="textures/terrain/Gravel1430_specular.dds"
+                        distance="textures/terrain/distance/Gravel030_diffuse.dds" />
+        </fillType>
+        
+        <fillType name="RECLAIMEDBRICK" title="$l10n_fillType_ReclaimedBrick" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="32" />
+            <economy pricePerLiter="0.0126" >
+                <factors>
+                    <factor period="1"  value="1.00" />
+                    <factor period="2"  value="1.07" />
+                    <factor period="3"  value="0.99" />
+                    <factor period="4"  value="0.94" />
+                    <factor period="5"  value="0.85" />
+                    <factor period="6"  value="0.81" />
+                    <factor period="7"  value="0.86" />
+                    <factor period="8"  value="0.99" />
+                    <factor period="9"  value="1.08" />
+                    <factor period="10" value="1.13" />
+                    <factor period="11" value="1.21" />
+                    <factor period="12" value="1.08" />
+                </factors>
+            </economy>
+            <image      hud     ="textures/hud/hud_fill_ReclaimedBrick.dds" />
+            <textures   diffuse ="textures/terrain/ReclaimedBrick_diffuse.dds"
+                        normal  ="textures/terrain/ReclaimedBrick_normal.dds"
+                        specular="textures/terrain/ReclaimedBrick_specular.dds"
+                        distance="textures/terrain/distance/Gravel030_diffuse.dds" />
+        </fillType>
+        
+        <fillType name="LASTRE" title="$l10n_fillType_Lastre" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="32" />
+            <economy pricePerLiter="0.06" >
+                <factors>
+                    <factor period="1"  value="1.00" />
+                    <factor period="2"  value="1.07" />
+                    <factor period="3"  value="0.99" />
+                    <factor period="4"  value="0.94" />
+                    <factor period="5"  value="0.85" />
+                    <factor period="6"  value="0.81" />
+                    <factor period="7"  value="0.86" />
+                    <factor period="8"  value="0.99" />
+                    <factor period="9"  value="1.08" />
+                    <factor period="10" value="1.13" />
+                    <factor period="11" value="1.21" />
+                    <factor period="12" value="1.08" />
+                </factors>
+            </economy>
+            <image      hud     ="textures/hud/hud_fill_Gravel030.dds" />
+            <textures   diffuse ="textures/terrain/Lastre_diffuse.dds"
+                        normal  ="textures/terrain/Lastre_normal.dds"
+                        specular="textures/terrain/Lastre_specular.dds"
+                        distance="textures/terrain/distance/Gravel030_diffuse.dds" />
+        </fillType>
+        
+        <fillType name="COMPOST" title="$l10n_fillType_Compost" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.7" maxPhysicalSurfaceAngle="32" />
+            <economy pricePerLiter="0.03" >
+                <factors>
+                    <factor period="1"  value="1.00" />
+                    <factor period="2"  value="1.07" />
+                    <factor period="3"  value="0.99" />
+                    <factor period="4"  value="0.94" />
+                    <factor period="5"  value="0.85" />
+                    <factor period="6"  value="0.81" />
+                    <factor period="7"  value="0.86" />
+                    <factor period="8"  value="0.99" />
+                    <factor period="9"  value="1.08" />
+                    <factor period="10" value="1.13" />
+                    <factor period="11" value="1.21" />
+                    <factor period="12" value="1.08" />
+                </factors>
+            </economy>
+            <effects prioritizedEffectType="ParticleEffect" fillSmokeColor="0.3 0.3 0.3 1"/>
+            <image      hud     ="textures/hud/hud_fill_Compost.dds" />
+            <textures   diffuse ="textures/terrain/Compost_diffuse.dds"
+                        normal  ="textures/terrain/Compost_normal.dds"
+                        specular="textures/terrain/Compost_specular.dds"
+                        distance="textures/terrain/distance/Gravel030_diffuse.dds" />
+        </fillType>
+
+        <fillType name="CLAY" title="$l10n_fillType_Clay" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.8" maxPhysicalSurfaceAngle="32" />
+            <economy pricePerLiter="0.026" >
+                <factors>
+                    <factor period="1"  value="1.00" />
+                    <factor period="2"  value="1.07" />
+                    <factor period="3"  value="0.99" />
+                    <factor period="4"  value="0.94" />
+                    <factor period="5"  value="0.85" />
+                    <factor period="6"  value="0.81" />
+                    <factor period="7"  value="0.86" />
+                    <factor period="8"  value="0.99" />
+                    <factor period="9"  value="1.08" />
+                    <factor period="10" value="1.13" />
+                    <factor period="11" value="1.21" />
+                    <factor period="12" value="1.08" />
+                </factors>
+            </economy>
+            <image      hud     ="textures/hud/hud_fill_Clay.dds" />
+            <textures   diffuse ="textures/terrain/Clay_diffuse.dds"
+                        normal  ="textures/terrain/Clay_normal.dds"
+                        specular="textures/terrain/Clay_specular.dds"
+                        distance="textures/terrain/distance/Clay_diffuse.dds" />
+        </fillType>
+        
+        <fillType name="WOODWAFER" title="$l10n_fillType_Wood_wafer" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.7" maxPhysicalSurfaceAngle="32" />
+            <economy pricePerLiter="1.5" >
+                <factors>
+                    <factor period="1"  value="1.00" />
+                    <factor period="2"  value="1.07" />
+                    <factor period="3"  value="0.99" />
+                    <factor period="4"  value="0.94" />
+                    <factor period="5"  value="0.85" />
+                    <factor period="6"  value="0.81" />
+                    <factor period="7"  value="0.86" />
+                    <factor period="8"  value="0.99" />
+                    <factor period="9"  value="1.08" />
+                    <factor period="10" value="1.13" />
+                    <factor period="11" value="1.21" />
+                    <factor period="12" value="1.08" />
+                </factors>
+            </economy>
+            <image      hud     ="textures/hud/hud_fill_WoodWafer.dds" />
+            <textures   diffuse ="textures/terrain/WoodWafer_diffuse.dds"
+                        normal  ="textures/terrain/WoodWafer_normal.dds"
+                        specular="textures/terrain/WoodWafer_specular.dds"
+                        distance="textures/terrain/distance/WoodWafer_diffuse.dds" />
+        </fillType>
+        <fillType name="PELLETS" title="$l10n_fillType_Pellets" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.6" maxPhysicalSurfaceAngle="32" />
+            <economy pricePerLiter="1.5" >
+                <factors>
+                    <factor period="1"  value="1.00" />
+                    <factor period="2"  value="1.07" />
+                    <factor period="3"  value="0.99" />
+                    <factor period="4"  value="0.94" />
+                    <factor period="5"  value="0.85" />
+                    <factor period="6"  value="0.81" />
+                    <factor period="7"  value="0.86" />
+                    <factor period="8"  value="0.99" />
+                    <factor period="9"  value="1.08" />
+                    <factor period="10" value="1.13" />
+                    <factor period="11" value="1.21" />
+                    <factor period="12" value="1.08" />
+                </factors>
+            </economy>
+            <image      hud     ="textures/hud/hud_fill_Pellets.dds" />
+            <textures   diffuse ="textures/terrain/Pellets_diffuse.dds"
+                        normal  ="textures/terrain/pellets_normal.dds"
+                        specular="textures/terrain/pellets_specular.dds"
+                        distance="textures/terrain/distance/Pellets_distance.dds" />
+        </fillType>
+        <fillType name="COAL" title="$l10n_fillType_Coal" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.6" maxPhysicalSurfaceAngle="32" />
+            <economy pricePerLiter="2" >
+                <factors>
+                    <factor period="1"  value="1.00" />
+                    <factor period="2"  value="1.07" />
+                    <factor period="3"  value="0.99" />
+                    <factor period="4"  value="0.94" />
+                    <factor period="5"  value="0.85" />
+                    <factor period="6"  value="0.81" />
+                    <factor period="7"  value="0.86" />
+                    <factor period="8"  value="0.99" />
+                    <factor period="9"  value="1.08" />
+                    <factor period="10" value="1.13" />
+                    <factor period="11" value="1.21" />
+                    <factor period="12" value="1.08" />
+                </factors>
+            </economy>
+            <image      hud     ="textures/hud/hud_fill_Coal.dds" />
+            <pallet     filename="xml/elements/pallettes/PalletteCoal.xml" />
+            <textures   diffuse ="textures/terrain/Coal_diffuse.dds"
+                        normal  ="textures/terrain/Coal_normal.dds"
+                        specular="textures/terrain/pellets_specular.dds"
+                        distance="textures/terrain/distance/Pellets_distance.dds" />
+        </fillType>
+
+        <!-- __________________ Production Chains start __________________ -->
+
+            <fillType name="EMULSION" title="$l10n_fillType_Emulsion" showOnPriceTable="true">
+                <physics massPerLiter="0.14" maxPhysicalSurfaceAngle="38" />
+                <pallet     filename="xml/elements/pallettes/Emulsion.xml" />
+                <image      hud     ="textures/hud/hud_fill_Emulsion.dds" />
+            </fillType>
+
+            <fillType name="ROCK" title="$l10n_fillType_rock" showOnPriceTable="false">
+                <physics massPerLiter="300.00" maxPhysicalSurfaceAngle="0" />
+                <image      hud     ="textures/hud/hud_fill_Rock.dds" />
+            </fillType>
+            
+
+        <!-- __________________ Production Chains end __________________ -->
+            
+            <fillType name="BORDER" title="$l10n_fillType_Border" showOnPriceTable="false" unitShort="$l10n_unit_literShort">
+                <physics massPerLiter="30.00" maxPhysicalSurfaceAngle="0" />
+                <image      hud     ="textures/hud/hud_fill_Rock.dds" />
+            </fillType>
+            
+            <fillType name="PIPE" title="$l10n_fillType_Pipe" showOnPriceTable="false" unitShort="$l10n_unit_literShort">
+                <physics massPerLiter="30.00" maxPhysicalSurfaceAngle="0" />
+                <image      hud     ="textures/hud/hud_fill_Pipedds.dds" />
+            </fillType>
+    </fillTypes>
+    
+    <fillTypeCategories>
+        <fillTypeCategory name="BULK" >TOPSOIL DIRT SAND CONCRETE ASPHALT ASPHALTMill MUD CRUSH GRAVEL CEMENT GRAVEL030 CLAY GRAVEL02 ROCKYMUD LASTRE REDASPHALT RECLAIMEDBRICK COMPOST WOODWAFER PELLETS COAL GRAVEL1430 GRAVEL27</fillTypeCategory>
+        <fillTypeCategory name="SIEVPRODUCT" >DIRT CRUSH RECLAIMEDBRICK GRAVEL030 GRAVEL GRAVEL1430 GRAVEL27</fillTypeCategory>
+        <fillTypeCategory name="CRUCHERPROD" > ROCK CONCRETE LASTRE BORDER ASPHALTMill GRAVEL1430 GRAVEL27</fillTypeCategory>
+        <fillTypeCategory name="PIECE" >EMULSION ROCK</fillTypeCategory>
+        <fillTypeCategory name="LIQUID" >EMULSION </fillTypeCategory>
+        <fillTypeCategory name="POSE" >PIPE BORDER</fillTypeCategory>
+        <fillTypeCategory name="ASPHALTPREPARATION" >EMULSION </fillTypeCategory>
+        <fillTypeCategory name="SHOVEL" >TOPSOIL DIRT SAND CONCRETE ASPHALT ASPHALTMill MUD CRUSH GRAVEL CEMENT GRAVEL030 CLAY GRAVEL02 ROCKYMUD LASTRE REDASPHALT RECLAIMEDBRICK COMPOST WOODWAFER PELLETS COAL GRAVEL1430 GRAVEL27</fillTypeCategory>
+        <fillTypeCategory name="LOADINGVEHICLE">TOPSOIL DIRT SAND CONCRETE ASPHALT ASPHALTMill MUD CRUSH GRAVEL CEMENT GRAVEL030 CLAY GRAVEL02 ROCKYMUD LASTRE REDASPHALT RECLAIMEDBRICK COMPOST ROCK WOODWAFER PELLETS COAL GRAVEL1430 GRAVEL27</fillTypeCategory>
+        <fillTypeCategory name="SILOTP" >TOPSOIL DIRT SAND CONCRETE ASPHALT ASPHALTMill MUD CRUSH GRAVEL CEMENT GRAVEL030 CLAY GRAVEL02 ROCKYMUD LASTRE REDASPHALT RECLAIMEDBRICK COMPOST WOODWAFER PELLETS COAL GRAVEL1430 GRAVEL27</fillTypeCategory>
+        <fillTypeCategory name="PRODUCT">TOPSOIL DIRT SAND CONCRETE ASPHALT ASPHALTMill CRUSH GRAVEL CEMENT EMULSION ROCK WOODWAFER PELLETS</fillTypeCategory>
+        <fillTypeCategory name="TRAINWAGON" >TOPSOIL DIRT SAND CONCRETE ASPHALT ASPHALTMill MUD CRUSH GRAVEL CEMENT GRAVEL030 CLAY GRAVEL02 ROCKYMUD LASTRE REDASPHALT RECLAIMEDBRICK WOODWAFER PELLETS COAL GRAVEL1430 GRAVEL27</fillTypeCategory>
+        <fillTypeCategory name="MANURESPREADER" >COMPOST WOODCHIPS</fillTypeCategory>
+    </fillTypeCategories>
+
+    <fillTypeSounds>
+        <fillTypeSound fillTypes="TOPSOIL SAND CONCRETE ASPHALT REDASPHALT COMPOST WOODWAFER PELLETS">
+            <sound template="grainMediumFill"/>
+        </fillTypeSound>
+        <fillTypeSound fillTypes="DIRT MUD CEMENT CLAY RECLAIMEDBRICK">
+            <sound template="grainSmallFill"/>
+        </fillTypeSound>
+        <fillTypeSound fillTypes="ASPHALTMill CRUSH GRAVEL GRAVEL030 GRAVEL02 ROCKYMUD LASTRE ROCK">
+            <sound template="potatoFill"/>
+        </fillTypeSound>
+    </fillTypeSounds>
+</map>

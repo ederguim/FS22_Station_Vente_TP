@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<l10n>
+	<translationContributors>Nonnus</translationContributors>
+<texts>
+		<text name="fillType_sand"			text="Areia"			 />
+		<text name="fillType_rocks"			text="Rochas"			 />
+		<text name="fillType_gravel"		text="Gravilha"			 />
+		<text name="fillType_dirt"			text="Terra"				 />
+		<text name="fillType_limestone"		text="Calcario"			 />
+		<text name="fillType_cement"		text="Cimento"			 />
+		<text name="fillType_coal"			text="Carvao"			 />
+		<text name="fillType_tailings"		text="Desperdicios"		 />
+		<text name="fillType_toutvenant"     text="Toutvenant"		 />
+		<text name="fillType_tar"			text="Betume"			 />
+		<text name="fillType_asphalt"		text="Asfalto"			 />
+		<text name="fillType_concrete"		text="Betão"			 />
+		<text name="fillType_gold"			text="Ouro"				 />
+		<text name="fillType_riversand"		text="Areia do Rio"		 />
+		<text name="fillType_rubber"			text="Borracha"			 />
+		<text name="fillType_riversandp"		text="Areia do Rio Limpa"	 />
+		<text name="fillType_stonepowder"	text="Pó de Pedra"		 />
+		<text name="fillType_gardenstones"	text="Pedras de Jardim"	 />
+		<text name="fillType_tires"			text="Pneus"			 />
+		<text name="fillType_iron"			text="Ferro"			 />
+		<text name="fillType_steel"			text="Aço"				 />
+		<text name="fillType_lithium"		text="Lítio"			 />
+		<text name="fillType_lithiumore"	text="Minério de Lítio"	 />
+		<text name="fillType_clay"			text="Barro"			 />
+		<text name="fillType_bricks"		    text="Tijolos"	     />
+		<text name="fillType_crudeoil"		text="Petroleo"			 />
+		<text name="fillType_marble"		    text="Marmore"			 />
+		<text name="fillType_marblepallets"	text="Paletes de Marmore"/>
+		<text name="fillType_propane"			text="Gás Propano"			 />
+		<text name="fillType_coalpowder"		    text="Pó de Carvão"	     />
+		<text name="fillType_crushedcoal"		text="Carvão triturado"			 />	
+		<text name="fillType_ironore"			text="Minério de Ferro"			 />
+		<text name="fillType_glass"			text="Vidro"			 />
+		<text name="fillType_rubble"			text="Destroços"			 />
+		<text name="fillType_crushedstone"			text="Pedra triturada"/>
+		<text name="fillType_stonechips"			text="Lascas de Pedra"			 />
+		<text name="sellingStationContainers" text="Ponto de Venda para Contentores"			 />
+</texts>
+	
+</l10n>

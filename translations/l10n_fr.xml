@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+<translationContributors>bricodx</translationContributors>
+
+<texts>
+		<text name="fillType_sand"			text="Sable"			 />
+		<text name="fillType_rocks"			text="Rochers"			 />
+		<text name="fillType_gravel"		text="Gravier"			 />
+		<text name="fillType_dirt"			text="Terre"				 />
+		<text name="fillType_limestone"		text="Calcaire"			 />
+		<text name="fillType_cement"		text="Ciment"			 />
+		<text name="fillType_coal"			text="Charbon"			 />
+		<text name="fillType_tailings"		text="Résidus"		 />
+		<text name="fillType_toutvenant"     text="Tout-venant"		 />
+		<text name="fillType_tar"			text="Goudron"			 />
+		<text name="fillType_asphalt"		text="Asphalte"			 />
+		<text name="fillType_concrete"		text="Béton"			 />
+		<text name="fillType_gold"			text="Or"				 />
+		<text name="fillType_riversand"		text="Sable de rivière"		 />
+		<text name="fillType_rubber"			text="Borracha"			 />
+		<text name="fillType_riversandp"		text="Sable nettoyé"	 />
+		<text name="fillType_stonepowder"	text="Poudre de pierre"		 />
+		<text name="fillType_gardenstones"	text="Pierre d'ornement"	 />
+		<text name="fillType_tires"			text="Pneus"			 />
+		<text name="fillType_iron"			text="Fer"			 />
+		<text name="fillType_steel"			text="Acier"				 />
+		<text name="fillType_lithium"		text="Lithium"			 />
+		<text name="fillType_lithiumore"	text="Minerai de Lithium"	 />
+		<text name="fillType_clay"			text="Argile"			 />
+		<text name="fillType_bricks"		    text="Briques"	     />
+		<text name="fillType_crudeoil"		text="Pétrole brut"			 />
+		<text name="fillType_marble"		    text="Marbre"			 />
+		<text name="fillType_marblepallets"	text="Plaques de marbre"/>
+		<text name="fillType_propane"			text="Gaz propane"			 />
+		<text name="fillType_coalpowder"		    text="Poudre de charbon"	     />
+		<text name="fillType_crushedcoal"		text="Charbon concassé"			 />	
+		<text name="fillType_ironore"			text="Minerai de fer"			 />
+		<text name="fillType_glass"			text="Verre"			 />
+		<text name="fillType_rubble"			text="Décombres"			 />
+		<text name="fillType_crushedstone"			text="Pierre Concassé"/>
+		<text name="fillType_stonechips"			text="Pierre Chips"			 />
+		<text name="sellingStationContainers" text="Entrepôt de conteneurs"			 />
+</texts>
+
+</l10n>
